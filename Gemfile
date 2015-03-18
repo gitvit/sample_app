@@ -10,18 +10,18 @@ group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec', '2.5.0'
-  
+    
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
-
+  gem 'factory_girl_rails', '4.2.1'
   # OS X: раскомментируйте эти строки.
   # gem 'growl', '1.0.3'
 
   # Linux: раскомментируйте эти строки.
-  # gem 'libnotify', '0.8.0'
+   gem 'libnotify', '0.8.0'
 
   # Windows: раскомментируйте эти строки.
   # gem 'rb-notifu', '0.0.4'

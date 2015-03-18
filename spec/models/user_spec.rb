@@ -3,9 +3,9 @@ require 'spec_helper'
 describe User do
 
   before do 
-  	 @user = User.new(name: "Example User", email: "user@example.com",
-                      password: "zalupa", password_confirmation: "zalupa") 
-  	end
+     @user = User.new(name: "Example User", email: "user@example.com",
+                      password: "foobar", password_confirmation: "foobar") 
+    end
   subject { @user }
 
   it { should respond_to(:name) }
@@ -18,8 +18,8 @@ describe User do
   it { should be_valid }
 
   describe "when name is not present" do
-  	before { @user.name = "" }
-  	it { should_not be_valid }
+    before { @user.name = "" }
+    it { should_not be_valid }
    describe "when email is not present" do
     before { @user.email = " " } 
     it { should_not be_valid }
@@ -47,7 +47,7 @@ end
     describe "with valid password" do
       it { should eq found_user.authenticate(@user.password) }
     end
-
+    
     describe "with invalid password" do
       let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
